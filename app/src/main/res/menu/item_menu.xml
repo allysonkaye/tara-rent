@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="carpool"
+        android:icon="@drawable/usergroup"
+
+        >
+    </item>
+
+    <item android:id="@+id/nav_tararent"
+        android:title="tararent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/tararent_logo"
+
+
+        >
+    </item>
+
+    <item android:id="@+id/nav_chat"
+        android:title="chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/chat"
+
+
+        >
+    </item>
+
+
+
+
+
+</menu>

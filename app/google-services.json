@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "951802168522",
+    "project_id": "tararent-83deb",
+    "storage_bucket": "tararent-83deb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951802168522:android:826da27a88b3e835c52033",
+        "android_client_info": {
+          "package_name": "com.example.momentum"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtVpKihaMiWTfFk_RVRgNkotsA0pSawXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951802168522:android:a01a3f04bafa7b25c52033",
+        "android_client_info": {
+          "package_name": "com.example.tararent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtVpKihaMiWTfFk_RVRgNkotsA0pSawXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
