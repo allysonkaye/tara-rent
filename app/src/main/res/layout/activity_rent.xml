@@ -42,7 +42,8 @@
 
     </LinearLayout>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constr"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,39 +61,47 @@
             android:textSize="32dp"
             android:textColor="@color/black"
             android:textFontWeight="700"
+            app:layout_constraintTop_toTopOf="@id/constr"
             android:layout_margin="20dp"
             />
 
+
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txt_carpool"
-            android:layout_marginLeft="20dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
             android:text="No Rents Yet."
-            android:textFontWeight="700"
-            android:layout_marginTop="80dp"
             android:textColor="@color/black"
-            android:textSize="24dp"/>
+            android:textFontWeight="700"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_carpool" />
 
 
         <TextView
             android:id="@+id/no_rent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:background="@drawable/btn_rent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="150dp"
             android:padding="15dp"
-            android:text="Look for a Vehicle" >
+            android:layout_margin="20dp"
+            android:text="Look for a Vehicle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
         </TextView>
 
-
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
-            >
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:layout_width="match_parent"
@@ -114,11 +123,10 @@
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-
-        </RelativeLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

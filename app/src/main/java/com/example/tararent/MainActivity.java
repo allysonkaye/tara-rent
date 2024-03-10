@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent i = new Intent(MainActivity.this, rent.class);
+                Intent i = new Intent(MainActivity.this, rent_status.class);
 
 
                 startActivity(i);

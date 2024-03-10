@@ -4,63 +4,239 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    tools:context=".MainActivity"
+    android:background="@color/orange">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/tararent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/glines2"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cardbg"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glines1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/glines"
+        app:layout_constraintTop_toBottomOf="@id/glines2"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interbold"
+            android:text="Create your Account"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toStartOf="@+id/ihTitle2"
+            app:layout_constraintStart_toStartOf="@+id/ihTitle"
+            app:layout_constraintTop_toTopOf="@id/iTitle" />
 
         <EditText
             android:id="@+id/signupEmail"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Email/Mobile Number"
-            android:padding="8dp"
+            android:background="@drawable/bgedittext"
+            android:drawableLeft="@drawable/emailvector"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:paddingStart="20dp"
             android:textSize="16dp"
-            android:inputType="textNoSuggestions"
-            />
+            android:fontFamily="@font/regular"
+            android:drawablePadding="20dp"
+            app:layout_constraintEnd_toEndOf="@id/ihTitle2"
+            app:layout_constraintStart_toStartOf="@id/ihTitle"
+            app:layout_constraintTop_toTopOf="@id/glineEmail" />
 
         <EditText
             android:id="@+id/signupPassword"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:background="@drawable/bgedittext"
+            android:drawableLeft="@drawable/password"
+            android:drawableRight="@drawable/hideicon"
+            android:hint="*******"
             android:inputType="textPassword"
-            android:padding="8dp"
+            android:padding="15dp"
+            android:paddingStart="20dp"
             android:textSize="16dp"
+            android:fontFamily="@font/regular"
+            android:drawablePadding="20dp"
+            app:layout_constraintEnd_toEndOf="@id/ihTitle2"
+            app:layout_constraintStart_toStartOf="@id/ihTitle"
+            app:layout_constraintBottom_toTopOf="@id/glinepass"/>
 
-            />
-
-
-
-        <!--signup btn-->
         <Button
             android:id="@+id/signupbtn"
-            android:layout_width="140dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="#845EF7"
-            android:padding="8dp"
-            android:textColor="@color/white"
-            android:textSize="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:text="Sign Up"
-            android:layout_marginBottom="24dp" />
-        <!--            android:onClick="goToSignUpActivity"-->
+            android:textSize="16dp"
+            android:backgroundTint="@color/orange"
+            app:layout_constraintEnd_toEndOf="@id/ihTitle2"
+            app:layout_constraintStart_toStartOf="@id/ihTitle"
+            app:layout_constraintTop_toTopOf="@id/glinebutton" />
 
-        <TextView
-            android:id="@+id/already"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already Have an account?"
-            android:textColor="@color/orange"
+            app:layout_constraintEnd_toEndOf="@id/ihTitle2"
+            app:layout_constraintStart_toStartOf="@id/ihTitle"
+            app:layout_constraintTop_toTopOf="@id/glineterms"
+            android:orientation="vertical"
+            android:gravity="center">
 
-            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="By signing up, you agree to Tararent’s"
+                android:fontFamily="@font/regular"
+                android:gravity="center"/>
 
-        </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="Terms of Service"
+                    android:fontFamily="@font/interbold"
+                    android:textColor="@color/orange"
+                    android:paddingStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="and"
+                    android:fontFamily="@font/regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="Privacy Policy"
+                    android:fontFamily="@font/interbold"
+                    android:textColor="@color/orange"
+                    android:paddingStart="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
 
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/ihTitle2"
+            app:layout_constraintStart_toStartOf="@id/ihTitle"
+            app:layout_constraintTop_toTopOf="@id/glinecreate" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Already have an account?"
+                android:fontFamily="@font/regular"/>
+
+            <TextView
+                android:id="@+id/already"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Sign In"
+                android:fontFamily="@font/interbold"
+                android:textColor="@color/orange"
+                android:paddingStart="5dp"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/iTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glineEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glinepass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glinebutton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glineterms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glinecreate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ihTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ihTitle2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glines"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glines1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glines2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

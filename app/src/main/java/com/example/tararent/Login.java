@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +20,8 @@ public class Login extends AppCompatActivity {
     EditText loginEmail, loginPass;
 
     Button loginbtn;
+
+    TextView signupbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,7 @@ public class Login extends AppCompatActivity {
         loginEmail = findViewById(R.id.loginEmail);
         loginPass = findViewById(R.id.loginPassword);
         loginbtn = findViewById(R.id.loginbtn);
+        signupbtn = findViewById(R.id.signupbtn);
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +39,17 @@ public class Login extends AppCompatActivity {
                 String pass = loginPass.getText().toString().trim();
 
                 loginUser(email, pass);
+            }
+        });
+
+        signupbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Login.this, SignUp.class);
+
+
+                startActivity(i);
+                finish();
             }
         });
     }

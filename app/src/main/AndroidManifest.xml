@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Tararent"
         tools:targetApi="31">
         <activity
+            android:name=".User_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Drivers_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Confirm_Booking"
+            android:exported="false" />
+        <activity
             android:name=".rent_status"
             android:exported="false" />
         <activity
