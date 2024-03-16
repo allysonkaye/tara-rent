@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Tararent"
         tools:targetApi="31">
         <activity
+            android:name=".Edit_User_Info"
+            android:exported="false" />
+        <activity
+            android:name=".booked_information"
+            android:exported="false" />
+        <activity
             android:name=".User_profile"
             android:exported="false" />
         <activity
